@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfidalgo <cfidalgo@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 10:54:27 by cfidalgo          #+#    #+#             */
-/*   Updated: 2024/03/24 19:30:57 by cfidalgo         ###   ########.fr       */
+/*   Created: 2024/03/24 19:48:55 by cfidalgo          #+#    #+#             */
+/*   Updated: 2024/04/09 20:26:30 by cfidalgo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 # define ERROR_LENGTH 6
 # define MAX_ARG_LENGTH 11
 # define MIN_NUMBERS_TO_SORT 3
-# include "libft/libft.h"
+# include "../libft/libft.h"
 
 // Structs
 typedef struct s_moves
@@ -92,30 +92,8 @@ void		rev_rotate_a(t_state *state);
 void		rev_rotate_b(t_state *state);
 void		rev_rotate_both(t_state *state);
 
-// Moves helpers
-int			calculate_move_cost(t_state *state);
-void		calculate_double_rotations(t_state *state);
-void		execute_moves(t_state *state);
-
-// Push to stack B helpers
-int			find_next_num_index_in_stack_b(t_state *state, int stack_a_num);
-int			find_biggest_num_index_in_stack_b(t_state *state);
-void		calculate_prerotations_stack_b(t_state *state, int num_index);
-void		calculate_rotations_stack_a(t_state *state, int num_to_move);
-
-// Push back to stack A helpers
-int			find_next_num_index_in_stack_a(t_state *state, int stack_b_num);
-int			find_smallest_num_index_in_stack_a(t_state *state);
-void		calculate_prerotations_stack_a(t_state *state, int num_index);
-void		arrange_stack_a(t_state *state);
-
-// Algorithm
-void		sort_stack(t_state *state);
-
-// Algorithm helpers
-int			is_stack_sorted(t_stack *stack);
-void		push_to_stack_b(t_state *state);
-void		push_back_to_stack_a(t_state *state);
+// Read instructions
+void		read_instructions(t_state *state);
 
 // Error handlers
 void		handle_error(void);

@@ -6,7 +6,7 @@
 #    By: cfidalgo <cfidalgo@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/28 13:59:33 by cfidalgo          #+#    #+#              #
-#    Updated: 2024/03/24 21:29:10 by cfidalgo         ###   ########.fr        #
+#    Updated: 2024/04/09 20:25:04 by cfidalgo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,12 +39,12 @@ MKDIR = mkdir -p
 
 
 #===========# DIRS #===========#
-INC = ./
-BINC = ./
+INC = inc/
+BINC = inc_bonus/
 LIBFT_DIR = libft/
 OBJS_DIR = bin/
-SRC_DIR = ./
-BSRC_DIR = ./
+SRC_DIR = src/
+BSRC_DIR = src_bonus/
 TEST_DIR = .testing/
 TEST_BACKUP = tests_backup/
 PROGRAM = push_swap
